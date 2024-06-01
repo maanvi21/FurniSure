@@ -29,18 +29,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <!-- modal script -->
 <script>
-  // Function to display the uploaded image in a modal
-  document.getElementById('scanBtn').addEventListener('click', function() {
-    var fileInput = document.getElementById('formFile');
-    if (fileInput.files && fileInput.files[0]) {
-      var reader = new FileReader();
-      reader.onload = function(e) {
-        document.getElementById('uploadedImage').src = e.target.result;
-        $('#imageModal').modal('show'); // Show the modal
-      };
-      reader.readAsDataURL(fileInput.files[0]);
-    }
-  });
+
 </script>
   </body>
 </html>
