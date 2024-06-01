@@ -9,16 +9,59 @@
   <body>
     <!-- navbar -->
     {% include 'navbar.html' %}
+    <div class="mb-3">
     <h1> Scan for a better future!</h1>
-    <h4> Click on the scan button to get more information about how your product was made</h4>
-    <!-- to open camera and scan -->
-     <div class="scanbtn"> <p> <button type="button" class="btn btn-success mx-2"> Scan Image</button> </p> </div>
-<!-- if not camera then upload an image  -->
+    <!--upload an image  -->
 <div class="mb-3">
     <h4> Drop an image to scan  </h4> 
-    <input class="form-control" type="file" id="formFile">
-  </div>
-  <div class="scanbtn"> <p> <button type="button" class="btn btn-success mx-2"> Scan Image</button> </p> </div>
+    <input class="form-control" type="file" id="formFile" required>
+  </div>  
+  <!-- upload image and confirm from user -->
+   <div> <p> <a type="button" class="btn btn-success mx-2" href="/confirm"> Upload </a> </p> </div>
+ 
+<!-- questions for the user -->
+  <div class="mb-3"> 
+    <label for="q1" class="form-label mx-4"> What type of furniture is this? </label>
+    <input class="form-control mx-4" list="datalistOptions1" id="exampleDataList1" placeholder="Type to submit...">
+    <datalist id="datalistOptions1">
+      <option value="Chair">
+      <option value="Cabinet">
+      <option value="Table/ Stand (any type)">
+      <option value="Home decor">
+      <option value="Frame (photo frame, bed frame etc)">
+    </datalist>
+
+    <label for="q2" class="form-label mx-4" > What is the material used? </label>
+    <input class="form-control mx-4" list="datalistOptions2" id="exampleDataList2" placeholder="Type to submit...">
+    <datalist id="datalistOptions2">
+      <option value="Plastic">
+      <option value="Wood">
+      <option value="Marble">
+      <option value="Granite">
+      </datalist>
+
+      
+    <label for="q3" class="form-label mx-4">How old is it? </label>
+    <input class="form-control mx-4" list="datalistOptions3" id="exampleDataList3" placeholder="Type to submit...">
+    <datalist id="datalistOptions3">
+      <option value="Recently purchased">
+      <option value="2-4 years">
+      <option value="5-8 years">
+      <option value="more than 8-10 years">
+      </datalist>
+</div>
+<!-- scan button -->
+<div class="mb-3">
+  <div class="scanbtn"><p> <button type="button" class="btn btn-success mx-2"> Scan Image</button> </p> </div> 
+</div>
+
+
+
+
+
+
+
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
